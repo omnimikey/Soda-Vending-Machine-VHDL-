@@ -1,0 +1,74 @@
+library ieee;
+use ieee.std_logic_1164.all ;
+entity state_machine is
+port(
+    clk,reset,c,choice,comp:    in std_logic;
+    v: out std_logic_vector(7 downto 0);
+	 E: out std_logic_vector(7 downto 0);
+    D: out std_logic_vector(1 downto 0)
+end state_machine;
+
+architecture state_machine of state_machine is 
+type Statetype is (S0,S1);
+signal state, next_state: Statetype;
+begin 
+state_comb: process (state,input) begin
+  case state is
+    when S0 => --initialization state
+	   if c = '1' then --first coin input; can c be clk?
+		  next_state <= S1;
+		  P <= V;
+		else
+		  next_state <= S0;
+		  P <= '00000000';
+		end if;
+	
+    when S1 => --waiting state
+	   if c <= '1' then 
+		  next_state <= S2;
+		  --accumulator saves value of P while reset is high
+		  tempInP <= P;
+		  AC0: accumulator port map (clk,reset,tempInP,tempOutP);
+		  BA0: adder8bit port map (V,tempOutP,logic0,adderOut,logic0);
+		  P <= adderOut;
+		else
+		  next_state <=S1;
+		end if;
+		
+    when S2 => --comparison state
+	   CM0: choiceMux port map (choice,Cx);
+		--Cx is the cost of the choice (C0 or C1)
+	   CO0: comp8bit port map (P,Cx,PgtC,PltC,PeqC);
+	   if PltC <= '1' then
+		--P is less than Cx, need to input more money
+		  next_state <= S1;
+		else
+		--enough money, go to dispensing state
+		  next_state <= S3;
+		end if;
+		
+    when S3 =>	--dispensing state
+	   if choice <= '1' then
+		  D <= '10'
+		  if PeqC <= '1' then
+		  next_state <= S0;
+		  output <= '1';
+		else
+		  next_state <=S1;
+		  output <= '0';
+		end if;
+  end case;
+end process state_comb;
+
+state_clocked: process
+begin
+wait until (clk'event and clk='1');
+		if reset='1' then
+		state <= S0;
+		else
+		state <= next_state;
+end if;
+end process state_clocked;
+end state_machine; 	
+		
+		

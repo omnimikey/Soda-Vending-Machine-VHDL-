@@ -1,0 +1,31 @@
+--synchronous 8-bit register
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity register8bit is
+  port(
+  clk:   in std_logic;
+  clear: in std_logic;
+  D:     in std_logic_vector(7 downto 0);
+  Q:     out std_logic_vector(7 downto 0)
+  );
+end register8bit;
+
+architecture register8bit of register8bit is
+begin
+  DF: process
+  constant zero: std_logic_vector(7 downto 0):="00000000";
+  begin
+  --synchronous reset
+    wait until (rising_edge(clk));
+	 
+	 if clear = '0' then
+	   Q <= zero;
+    elsif clear = '1' then
+	   Q <= D;
+	 elsif clear = 'x' or clk = 'x' then
+	   Q <= (others => 'x');
+	 end if;
+  end process DF;
+end register8bit

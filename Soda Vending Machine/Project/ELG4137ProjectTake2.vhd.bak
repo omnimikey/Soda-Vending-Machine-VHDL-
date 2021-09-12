@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all ;
+entity vendMachine is
+  port(
+    clk,reset,c,choice: in std_logic;
+    V: in  std_logic_vector(7 downto 0); --value of input coin
+	 E: out std_logic_vector(7 downto 0); --amount of change
+    D: out std_logic_vector(1 downto 0)  --type of drink output or no drink output
+  );
+end vendMachine;
+
+architecture stateMachine of vendMachine is 
+  component accumulator
+    port(
+    clk:      in std_logic;
+    reset:    in std_logic;
+    data_in:  in std_logic_vector(7 downto 0);
+    data_out: out std_logic_vector(7 downto 0)
+    );
+  end component;
+  
+  component adder8bit
+    port(
+      in1: in  std_logic_vector(7 downto 0);
+		in2: in  std_logic_vector(7 downto 0);
+		ci:  in  std_logic;
+      sum: out std_logic_vector(7 downto 0);
+      co:  out std_logic
+    );
+  end component;
+  
+  component bit8_comp
+    port(
+      A: in std_logic_vector(7 downto 0);
+		B: in std_logic_vector(7 downto 0);
+		AgtB,AltB,AeqB: out std_logic
+    );
+  end component;

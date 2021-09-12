@@ -1,0 +1,534 @@
+Simulator report for ELG4137Project
+Tue Apr 12 16:47:08 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 262 nodes    ;
+; Simulation Coverage         ;      62.98 % ;
+; Total Number of Transitions ; 924          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                           ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                         ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                      ; Timing        ;
+; Start time                                                                                 ; 0 ns                                            ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                             ;               ;
+; Vector input source                                                                        ; Z:/cgrah064/Documents/ELG4137/Project/test2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                              ; On            ;
+; Check outputs                                                                              ; Off                                             ; Off           ;
+; Report simulation coverage                                                                 ; On                                              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                              ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                              ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                              ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                             ; Off           ;
+; Detect glitches                                                                            ; Off                                             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                             ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                            ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                       ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                       ; Transport     ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      62.98 % ;
+; Total nodes checked                                 ; 262          ;
+; Total output ports checked                          ; 262          ;
+; Total output ports with complete 1/0-value coverage ; 165          ;
+; Total output ports with no 1/0-value coverage       ; 84           ;
+; Total output ports with no 1-value coverage         ; 94           ;
+; Total output ports with no 0-value coverage         ; 87           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                  ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |vendMachine|state~0                                        ; |vendMachine|state~0                                        ; out              ;
+; |vendMachine|state~1                                        ; |vendMachine|state~1                                        ; out              ;
+; |vendMachine|state~2                                        ; |vendMachine|state~2                                        ; out              ;
+; |vendMachine|state~3                                        ; |vendMachine|state~3                                        ; out              ;
+; |vendMachine|state~4                                        ; |vendMachine|state~4                                        ; out              ;
+; |vendMachine|state~5                                        ; |vendMachine|state~5                                        ; out              ;
+; |vendMachine|state~6                                        ; |vendMachine|state~6                                        ; out              ;
+; |vendMachine|state~7                                        ; |vendMachine|state~7                                        ; out              ;
+; |vendMachine|state~8                                        ; |vendMachine|state~8                                        ; out              ;
+; |vendMachine|state~9                                        ; |vendMachine|state~9                                        ; out              ;
+; |vendMachine|state.S0                                       ; |vendMachine|state.S0                                       ; regout           ;
+; |vendMachine|state.S1                                       ; |vendMachine|state.S1                                       ; regout           ;
+; |vendMachine|state.S2                                       ; |vendMachine|state.S2                                       ; regout           ;
+; |vendMachine|clk                                            ; |vendMachine|clk                                            ; out              ;
+; |vendMachine|reset                                          ; |vendMachine|reset                                          ; out              ;
+; |vendMachine|c                                              ; |vendMachine|c                                              ; out              ;
+; |vendMachine|V[0]                                           ; |vendMachine|V[0]                                           ; out              ;
+; |vendMachine|V[1]                                           ; |vendMachine|V[1]                                           ; out              ;
+; |vendMachine|V[2]                                           ; |vendMachine|V[2]                                           ; out              ;
+; |vendMachine|V[3]                                           ; |vendMachine|V[3]                                           ; out              ;
+; |vendMachine|V[4]                                           ; |vendMachine|V[4]                                           ; out              ;
+; |vendMachine|P[0]                                           ; |vendMachine|P[0]                                           ; pin_out          ;
+; |vendMachine|P[1]                                           ; |vendMachine|P[1]                                           ; pin_out          ;
+; |vendMachine|P[2]                                           ; |vendMachine|P[2]                                           ; pin_out          ;
+; |vendMachine|P[3]                                           ; |vendMachine|P[3]                                           ; pin_out          ;
+; |vendMachine|P[4]                                           ; |vendMachine|P[4]                                           ; pin_out          ;
+; |vendMachine|E[1]                                           ; |vendMachine|E[1]                                           ; pin_out          ;
+; |vendMachine|E[3]                                           ; |vendMachine|E[3]                                           ; pin_out          ;
+; |vendMachine|D[0]                                           ; |vendMachine|D[0]                                           ; pin_out          ;
+; |vendMachine|D[1]                                           ; |vendMachine|D[1]                                           ; pin_out          ;
+; |vendMachine|state0                                         ; |vendMachine|state0                                         ; pin_out          ;
+; |vendMachine|state1                                         ; |vendMachine|state1                                         ; pin_out          ;
+; |vendMachine|state2                                         ; |vendMachine|state2                                         ; pin_out          ;
+; |vendMachine|PgreaterThanC                                  ; |vendMachine|PgreaterThanC                                  ; pin_out          ;
+; |vendMachine|PlessThanC                                     ; |vendMachine|PlessThanC                                     ; pin_out          ;
+; |vendMachine|PequalToC                                      ; |vendMachine|PequalToC                                      ; pin_out          ;
+; |vendMachine|state~10                                       ; |vendMachine|state~10                                       ; out0             ;
+; |vendMachine|state.S0~0                                     ; |vendMachine|state.S0~0                                     ; out0             ;
+; |vendMachine|Selector0~0                                    ; |vendMachine|Selector0~0                                    ; out0             ;
+; |vendMachine|Selector0~1                                    ; |vendMachine|Selector0~1                                    ; out0             ;
+; |vendMachine|enS2                                           ; |vendMachine|enS2                                           ; out0             ;
+; |vendMachine|state~14                                       ; |vendMachine|state~14                                       ; out0             ;
+; |vendMachine|register2bit:RE5|regout~0                      ; |vendMachine|register2bit:RE5|regout~0                      ; out              ;
+; |vendMachine|register2bit:RE5|regout~1                      ; |vendMachine|register2bit:RE5|regout~1                      ; out              ;
+; |vendMachine|register2bit:RE5|regout~2                      ; |vendMachine|register2bit:RE5|regout~2                      ; out              ;
+; |vendMachine|register2bit:RE5|regout~3                      ; |vendMachine|register2bit:RE5|regout~3                      ; out              ;
+; |vendMachine|register2bit:RE5|regout[0]                     ; |vendMachine|register2bit:RE5|regout[0]                     ; regout           ;
+; |vendMachine|register2bit:RE5|regout[1]                     ; |vendMachine|register2bit:RE5|regout[1]                     ; regout           ;
+; |vendMachine|register2bit:RE4|regout~0                      ; |vendMachine|register2bit:RE4|regout~0                      ; out              ;
+; |vendMachine|register2bit:RE4|regout~1                      ; |vendMachine|register2bit:RE4|regout~1                      ; out              ;
+; |vendMachine|register2bit:RE4|regout~2                      ; |vendMachine|register2bit:RE4|regout~2                      ; out              ;
+; |vendMachine|register2bit:RE4|regout~3                      ; |vendMachine|register2bit:RE4|regout~3                      ; out              ;
+; |vendMachine|register2bit:RE4|regout[0]                     ; |vendMachine|register2bit:RE4|regout[0]                     ; regout           ;
+; |vendMachine|register2bit:RE4|regout[1]                     ; |vendMachine|register2bit:RE4|regout[1]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout~4                      ; |vendMachine|register8bit:RE3|regout~4                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~6                      ; |vendMachine|register8bit:RE3|regout~6                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~12                     ; |vendMachine|register8bit:RE3|regout~12                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~14                     ; |vendMachine|register8bit:RE3|regout~14                     ; out              ;
+; |vendMachine|register8bit:RE3|regout[1]                     ; |vendMachine|register8bit:RE3|regout[1]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[3]                     ; |vendMachine|register8bit:RE3|regout[3]                     ; regout           ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA7|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA7|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA6|or_gate:G5|O       ; |vendMachine|adder8bit:BA2|adder1bit:FA6|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA6|and_gate:G3|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA6|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA6|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA6|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA5|or_gate:G5|O       ; |vendMachine|adder8bit:BA2|adder1bit:FA5|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA5|and_gate:G3|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA5|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA5|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA5|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA4|or_gate:G5|O       ; |vendMachine|adder8bit:BA2|adder1bit:FA4|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G3|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA4|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA4|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA4|exor_gate:G1|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA4|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA3|or_gate:G5|O       ; |vendMachine|adder8bit:BA2|adder1bit:FA3|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA3|and_gate:G4|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA3|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA3|and_gate:G3|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA3|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA3|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA3|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA3|exor_gate:G1|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA3|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA2|or_gate:G5|O       ; |vendMachine|adder8bit:BA2|adder1bit:FA2|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA2|and_gate:G4|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA2|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA2|and_gate:G3|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA2|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA2|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA2|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA2|exor_gate:G1|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA2|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA1|and_gate:G3|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA1|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA1|exor_gate:G2|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA1|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA0|and_gate:G4|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA0|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA0|exor_gate:G1|O     ; |vendMachine|adder8bit:BA2|adder1bit:FA0|exor_gate:G1|O     ; out0             ;
+; |vendMachine|bit8_comp:CO0|nor_gate:NR|O~0                  ; |vendMachine|bit8_comp:CO0|nor_gate:NR|O~0                  ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA1|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA1|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand_gate:NA1|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand_gate:NA1|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand_gate:NA1|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand_gate:NA1|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA1|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA1|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA41|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA41|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA41|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA41|O~1 ; out0             ;
+; |vendMachine|register8bit:RE2|regout~3                      ; |vendMachine|register8bit:RE2|regout~3                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~4                      ; |vendMachine|register8bit:RE2|regout~4                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~5                      ; |vendMachine|register8bit:RE2|regout~5                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~6                      ; |vendMachine|register8bit:RE2|regout~6                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~7                      ; |vendMachine|register8bit:RE2|regout~7                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~11                     ; |vendMachine|register8bit:RE2|regout~11                     ; out              ;
+; |vendMachine|register8bit:RE2|regout~12                     ; |vendMachine|register8bit:RE2|regout~12                     ; out              ;
+; |vendMachine|register8bit:RE2|regout~13                     ; |vendMachine|register8bit:RE2|regout~13                     ; out              ;
+; |vendMachine|register8bit:RE2|regout~14                     ; |vendMachine|register8bit:RE2|regout~14                     ; out              ;
+; |vendMachine|register8bit:RE2|regout~15                     ; |vendMachine|register8bit:RE2|regout~15                     ; out              ;
+; |vendMachine|register8bit:RE2|regout[0]                     ; |vendMachine|register8bit:RE2|regout[0]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[1]                     ; |vendMachine|register8bit:RE2|regout[1]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[2]                     ; |vendMachine|register8bit:RE2|regout[2]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[3]                     ; |vendMachine|register8bit:RE2|regout[3]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[4]                     ; |vendMachine|register8bit:RE2|regout[4]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout~3                      ; |vendMachine|register8bit:RE1|regout~3                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~4                      ; |vendMachine|register8bit:RE1|regout~4                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~5                      ; |vendMachine|register8bit:RE1|regout~5                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~6                      ; |vendMachine|register8bit:RE1|regout~6                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~7                      ; |vendMachine|register8bit:RE1|regout~7                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~11                     ; |vendMachine|register8bit:RE1|regout~11                     ; out              ;
+; |vendMachine|register8bit:RE1|regout~12                     ; |vendMachine|register8bit:RE1|regout~12                     ; out              ;
+; |vendMachine|register8bit:RE1|regout~13                     ; |vendMachine|register8bit:RE1|regout~13                     ; out              ;
+; |vendMachine|register8bit:RE1|regout~14                     ; |vendMachine|register8bit:RE1|regout~14                     ; out              ;
+; |vendMachine|register8bit:RE1|regout~15                     ; |vendMachine|register8bit:RE1|regout~15                     ; out              ;
+; |vendMachine|register8bit:RE1|regout[0]                     ; |vendMachine|register8bit:RE1|regout[0]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[1]                     ; |vendMachine|register8bit:RE1|regout[1]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[2]                     ; |vendMachine|register8bit:RE1|regout[2]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[3]                     ; |vendMachine|register8bit:RE1|regout[3]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[4]                     ; |vendMachine|register8bit:RE1|regout[4]                     ; regout           ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA3|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA3|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA3|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA3|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA3|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA3|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA2|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA2|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA2|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA2|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA2|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA2|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA1|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA1|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA0|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA0|exor_gate:G1|O     ; out0             ;
+; |vendMachine|register8bit:RE0|regout[0]                     ; |vendMachine|register8bit:RE0|regout[0]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[1]                     ; |vendMachine|register8bit:RE0|regout[1]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[2]                     ; |vendMachine|register8bit:RE0|regout[2]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[3]                     ; |vendMachine|register8bit:RE0|regout[3]                     ; regout           ;
+; |vendMachine|Selector0~3                                    ; |vendMachine|Selector0~3                                    ; out              ;
+; |vendMachine|Selector0~4                                    ; |vendMachine|Selector0~4                                    ; out              ;
+; |vendMachine|Selector1~0                                    ; |vendMachine|Selector1~0                                    ; out0             ;
+; |vendMachine|Selector1~1                                    ; |vendMachine|Selector1~1                                    ; out0             ;
+; |vendMachine|Selector1~2                                    ; |vendMachine|Selector1~2                                    ; out0             ;
+; |vendMachine|Selector2~0                                    ; |vendMachine|Selector2~0                                    ; out0             ;
+; |vendMachine|Selector2~1                                    ; |vendMachine|Selector2~1                                    ; out0             ;
+; |vendMachine|Selector2~2                                    ; |vendMachine|Selector2~2                                    ; out0             ;
+; |vendMachine|Equal0~0                                       ; |vendMachine|Equal0~0                                       ; out0             ;
+; |vendMachine|Equal1~0                                       ; |vendMachine|Equal1~0                                       ; out0             ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |vendMachine|V[5]                                           ; |vendMachine|V[5]                                           ; out              ;
+; |vendMachine|V[6]                                           ; |vendMachine|V[6]                                           ; out              ;
+; |vendMachine|V[7]                                           ; |vendMachine|V[7]                                           ; out              ;
+; |vendMachine|P[5]                                           ; |vendMachine|P[5]                                           ; pin_out          ;
+; |vendMachine|P[6]                                           ; |vendMachine|P[6]                                           ; pin_out          ;
+; |vendMachine|P[7]                                           ; |vendMachine|P[7]                                           ; pin_out          ;
+; |vendMachine|E[0]                                           ; |vendMachine|E[0]                                           ; pin_out          ;
+; |vendMachine|E[2]                                           ; |vendMachine|E[2]                                           ; pin_out          ;
+; |vendMachine|E[4]                                           ; |vendMachine|E[4]                                           ; pin_out          ;
+; |vendMachine|E[5]                                           ; |vendMachine|E[5]                                           ; pin_out          ;
+; |vendMachine|E[6]                                           ; |vendMachine|E[6]                                           ; pin_out          ;
+; |vendMachine|E[7]                                           ; |vendMachine|E[7]                                           ; pin_out          ;
+; |vendMachine|drinkCost[0]                                   ; |vendMachine|drinkCost[0]                                   ; pin_out          ;
+; |vendMachine|drinkCost[1]                                   ; |vendMachine|drinkCost[1]                                   ; pin_out          ;
+; |vendMachine|drinkCost[2]                                   ; |vendMachine|drinkCost[2]                                   ; pin_out          ;
+; |vendMachine|drinkCost[3]                                   ; |vendMachine|drinkCost[3]                                   ; pin_out          ;
+; |vendMachine|drinkCost[5]                                   ; |vendMachine|drinkCost[5]                                   ; pin_out          ;
+; |vendMachine|drinkCost[6]                                   ; |vendMachine|drinkCost[6]                                   ; pin_out          ;
+; |vendMachine|drinkCost[7]                                   ; |vendMachine|drinkCost[7]                                   ; pin_out          ;
+; |vendMachine|register8bit:RE3|regout~0                      ; |vendMachine|register8bit:RE3|regout~0                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~1                      ; |vendMachine|register8bit:RE3|regout~1                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~2                      ; |vendMachine|register8bit:RE3|regout~2                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~3                      ; |vendMachine|register8bit:RE3|regout~3                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~5                      ; |vendMachine|register8bit:RE3|regout~5                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~7                      ; |vendMachine|register8bit:RE3|regout~7                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~8                      ; |vendMachine|register8bit:RE3|regout~8                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~9                      ; |vendMachine|register8bit:RE3|regout~9                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~10                     ; |vendMachine|register8bit:RE3|regout~10                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~11                     ; |vendMachine|register8bit:RE3|regout~11                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~13                     ; |vendMachine|register8bit:RE3|regout~13                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~15                     ; |vendMachine|register8bit:RE3|regout~15                     ; out              ;
+; |vendMachine|register8bit:RE3|regout[0]                     ; |vendMachine|register8bit:RE3|regout[0]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[2]                     ; |vendMachine|register8bit:RE3|regout[2]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[4]                     ; |vendMachine|register8bit:RE3|regout[4]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[5]                     ; |vendMachine|register8bit:RE3|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[6]                     ; |vendMachine|register8bit:RE3|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[7]                     ; |vendMachine|register8bit:RE3|regout[7]                     ; regout           ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G4|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G4|O      ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|register8bit:RE2|regout~0                      ; |vendMachine|register8bit:RE2|regout~0                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~1                      ; |vendMachine|register8bit:RE2|regout~1                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~2                      ; |vendMachine|register8bit:RE2|regout~2                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~8                      ; |vendMachine|register8bit:RE2|regout~8                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~9                      ; |vendMachine|register8bit:RE2|regout~9                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~10                     ; |vendMachine|register8bit:RE2|regout~10                     ; out              ;
+; |vendMachine|register8bit:RE2|regout[5]                     ; |vendMachine|register8bit:RE2|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[6]                     ; |vendMachine|register8bit:RE2|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[7]                     ; |vendMachine|register8bit:RE2|regout[7]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout~0                      ; |vendMachine|register8bit:RE1|regout~0                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~1                      ; |vendMachine|register8bit:RE1|regout~1                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~2                      ; |vendMachine|register8bit:RE1|regout~2                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~8                      ; |vendMachine|register8bit:RE1|regout~8                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~9                      ; |vendMachine|register8bit:RE1|regout~9                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~10                     ; |vendMachine|register8bit:RE1|regout~10                     ; out              ;
+; |vendMachine|register8bit:RE1|regout[5]                     ; |vendMachine|register8bit:RE1|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[6]                     ; |vendMachine|register8bit:RE1|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[7]                     ; |vendMachine|register8bit:RE1|regout[7]                     ; regout           ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA6|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA4|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA0|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA0|and_gate:G4|O      ; out0             ;
+; |vendMachine|register8bit:RE0|regout[5]                     ; |vendMachine|register8bit:RE0|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[6]                     ; |vendMachine|register8bit:RE0|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[7]                     ; |vendMachine|register8bit:RE0|regout[7]                     ; regout           ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |vendMachine|choice                                         ; |vendMachine|choice                                         ; out              ;
+; |vendMachine|V[5]                                           ; |vendMachine|V[5]                                           ; out              ;
+; |vendMachine|V[6]                                           ; |vendMachine|V[6]                                           ; out              ;
+; |vendMachine|V[7]                                           ; |vendMachine|V[7]                                           ; out              ;
+; |vendMachine|P[5]                                           ; |vendMachine|P[5]                                           ; pin_out          ;
+; |vendMachine|P[6]                                           ; |vendMachine|P[6]                                           ; pin_out          ;
+; |vendMachine|P[7]                                           ; |vendMachine|P[7]                                           ; pin_out          ;
+; |vendMachine|E[0]                                           ; |vendMachine|E[0]                                           ; pin_out          ;
+; |vendMachine|E[2]                                           ; |vendMachine|E[2]                                           ; pin_out          ;
+; |vendMachine|E[4]                                           ; |vendMachine|E[4]                                           ; pin_out          ;
+; |vendMachine|E[5]                                           ; |vendMachine|E[5]                                           ; pin_out          ;
+; |vendMachine|E[6]                                           ; |vendMachine|E[6]                                           ; pin_out          ;
+; |vendMachine|E[7]                                           ; |vendMachine|E[7]                                           ; pin_out          ;
+; |vendMachine|drinkCost[2]                                   ; |vendMachine|drinkCost[2]                                   ; pin_out          ;
+; |vendMachine|drinkCost[4]                                   ; |vendMachine|drinkCost[4]                                   ; pin_out          ;
+; |vendMachine|drinkCost[5]                                   ; |vendMachine|drinkCost[5]                                   ; pin_out          ;
+; |vendMachine|drinkCost[6]                                   ; |vendMachine|drinkCost[6]                                   ; pin_out          ;
+; |vendMachine|drinkCost[7]                                   ; |vendMachine|drinkCost[7]                                   ; pin_out          ;
+; |vendMachine|register8bit:RE3|regout~0                      ; |vendMachine|register8bit:RE3|regout~0                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~1                      ; |vendMachine|register8bit:RE3|regout~1                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~2                      ; |vendMachine|register8bit:RE3|regout~2                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~3                      ; |vendMachine|register8bit:RE3|regout~3                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~5                      ; |vendMachine|register8bit:RE3|regout~5                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~7                      ; |vendMachine|register8bit:RE3|regout~7                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~8                      ; |vendMachine|register8bit:RE3|regout~8                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~9                      ; |vendMachine|register8bit:RE3|regout~9                      ; out              ;
+; |vendMachine|register8bit:RE3|regout~10                     ; |vendMachine|register8bit:RE3|regout~10                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~11                     ; |vendMachine|register8bit:RE3|regout~11                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~13                     ; |vendMachine|register8bit:RE3|regout~13                     ; out              ;
+; |vendMachine|register8bit:RE3|regout~15                     ; |vendMachine|register8bit:RE3|regout~15                     ; out              ;
+; |vendMachine|register8bit:RE3|regout[0]                     ; |vendMachine|register8bit:RE3|regout[0]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[2]                     ; |vendMachine|register8bit:RE3|regout[2]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[4]                     ; |vendMachine|register8bit:RE3|regout[4]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[5]                     ; |vendMachine|register8bit:RE3|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[6]                     ; |vendMachine|register8bit:RE3|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE3|regout[7]                     ; |vendMachine|register8bit:RE3|regout[7]                     ; regout           ;
+; |vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G4|O      ; |vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G4|O      ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41|O~2 ; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41|O~2 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~0 ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~0 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC2|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand_gate:NA0|O~0   ; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand_gate:NA0|O~0   ; out0             ;
+; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand4_gate:NA40|O~1 ; |vendMachine|bit8_comp:CO0|bit_comp:BC1|nand4_gate:NA40|O~1 ; out0             ;
+; |vendMachine|register8bit:RE2|regout~0                      ; |vendMachine|register8bit:RE2|regout~0                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~1                      ; |vendMachine|register8bit:RE2|regout~1                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~2                      ; |vendMachine|register8bit:RE2|regout~2                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~8                      ; |vendMachine|register8bit:RE2|regout~8                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~9                      ; |vendMachine|register8bit:RE2|regout~9                      ; out              ;
+; |vendMachine|register8bit:RE2|regout~10                     ; |vendMachine|register8bit:RE2|regout~10                     ; out              ;
+; |vendMachine|register8bit:RE2|regout[5]                     ; |vendMachine|register8bit:RE2|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[6]                     ; |vendMachine|register8bit:RE2|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE2|regout[7]                     ; |vendMachine|register8bit:RE2|regout[7]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout~0                      ; |vendMachine|register8bit:RE1|regout~0                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~1                      ; |vendMachine|register8bit:RE1|regout~1                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~2                      ; |vendMachine|register8bit:RE1|regout~2                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~8                      ; |vendMachine|register8bit:RE1|regout~8                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~9                      ; |vendMachine|register8bit:RE1|regout~9                      ; out              ;
+; |vendMachine|register8bit:RE1|regout~10                     ; |vendMachine|register8bit:RE1|regout~10                     ; out              ;
+; |vendMachine|register8bit:RE1|regout[5]                     ; |vendMachine|register8bit:RE1|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[6]                     ; |vendMachine|register8bit:RE1|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE1|regout[7]                     ; |vendMachine|register8bit:RE1|regout[7]                     ; regout           ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA6|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G2|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G2|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O     ; |vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O     ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|or_gate:G5|O       ; |vendMachine|adder8bit:BA0|adder1bit:FA4|or_gate:G5|O       ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O      ; out0             ;
+; |vendMachine|adder8bit:BA0|adder1bit:FA0|and_gate:G4|O      ; |vendMachine|adder8bit:BA0|adder1bit:FA0|and_gate:G4|O      ; out0             ;
+; |vendMachine|register8bit:RE0|regout[4]                     ; |vendMachine|register8bit:RE0|regout[4]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[5]                     ; |vendMachine|register8bit:RE0|regout[5]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[6]                     ; |vendMachine|register8bit:RE0|regout[6]                     ; regout           ;
+; |vendMachine|register8bit:RE0|regout[7]                     ; |vendMachine|register8bit:RE0|regout[7]                     ; regout           ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr 12 16:47:07 2016
+Info: Command: quartus_sim --simulation_results_format=VWF ELG4137Project -c ELG4137Project
+Info (324025): Using vector source file "Z:/cgrah064/Documents/ELG4137/Project/test2.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxout[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cxin[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Pin[0]" in design.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      62.98 %
+Info (328052): Number of transitions in simulation is 924
+Info (324045): Vector file ELG4137Project.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 323 megabytes
+    Info: Processing ended: Tue Apr 12 16:47:08 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

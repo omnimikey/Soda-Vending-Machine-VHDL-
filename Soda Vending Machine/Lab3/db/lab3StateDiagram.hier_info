@@ -1,0 +1,421 @@
+|accumulator
+clk => register8bit:NG1.clk
+reset => register8bit:NG1.reset
+data_in[0] => adder8bit:BA0.in1[0]
+data_in[1] => adder8bit:BA0.in1[1]
+data_in[2] => adder8bit:BA0.in1[2]
+data_in[3] => adder8bit:BA0.in1[3]
+data_in[4] => adder8bit:BA0.in1[4]
+data_in[5] => adder8bit:BA0.in1[5]
+data_in[6] => adder8bit:BA0.in1[6]
+data_in[7] => adder8bit:BA0.in1[7]
+data_out[0] <= register8bit:NG1.regout[0]
+data_out[1] <= register8bit:NG1.regout[1]
+data_out[2] <= register8bit:NG1.regout[2]
+data_out[3] <= register8bit:NG1.regout[3]
+data_out[4] <= register8bit:NG1.regout[4]
+data_out[5] <= register8bit:NG1.regout[5]
+data_out[6] <= register8bit:NG1.regout[6]
+data_out[7] <= register8bit:NG1.regout[7]
+
+
+|accumulator|adder8bit:BA0
+in1[0] => adder1bit:FA0.A
+in1[1] => adder1bit:FA1.A
+in1[2] => adder1bit:FA2.A
+in1[3] => adder1bit:FA3.A
+in1[4] => adder1bit:FA4.A
+in1[5] => adder1bit:FA5.A
+in1[6] => adder1bit:FA6.A
+in1[7] => adder1bit:FA7.A
+in2[0] => adder1bit:FA0.B
+in2[1] => adder1bit:FA1.B
+in2[2] => adder1bit:FA2.B
+in2[3] => adder1bit:FA3.B
+in2[4] => adder1bit:FA4.B
+in2[5] => adder1bit:FA5.B
+in2[6] => adder1bit:FA6.B
+in2[7] => adder1bit:FA7.B
+ci => adder1bit:FA0.Cin
+sum[0] <= adder1bit:FA0.Sum
+sum[1] <= adder1bit:FA1.Sum
+sum[2] <= adder1bit:FA2.Sum
+sum[3] <= adder1bit:FA3.Sum
+sum[4] <= adder1bit:FA4.Sum
+sum[5] <= adder1bit:FA5.Sum
+sum[6] <= adder1bit:FA6.Sum
+sum[7] <= adder1bit:FA7.Sum
+co <= adder1bit:FA7.Cout
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA0
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA0|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA0|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA0|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA0|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA0|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA1
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA1|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA1|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA1|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA2
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA2|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA3
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA3|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA3|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA3|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA4
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA4|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA4|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA4|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA5
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA5|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA6
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA6|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA6|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA6|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA7
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA7|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA7|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA7|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA7|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|adder8bit:BA0|adder1bit:FA7|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|accumulator|register8bit:NG1
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+clk => regout[2]~reg0.CLK
+clk => regout[3]~reg0.CLK
+clk => regout[4]~reg0.CLK
+clk => regout[5]~reg0.CLK
+clk => regout[6]~reg0.CLK
+clk => regout[7]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+reset => regout~4.OUTPUTSELECT
+reset => regout~5.OUTPUTSELECT
+reset => regout~6.OUTPUTSELECT
+reset => regout~7.OUTPUTSELECT
+reset => regout~8.OUTPUTSELECT
+reset => regout~9.OUTPUTSELECT
+reset => regout~10.OUTPUTSELECT
+reset => regout~11.OUTPUTSELECT
+reset => regout~12.OUTPUTSELECT
+reset => regout~13.OUTPUTSELECT
+reset => regout~14.OUTPUTSELECT
+reset => regout~15.OUTPUTSELECT
+regin[0] => regout~7.DATAB
+regin[1] => regout~6.DATAB
+regin[2] => regout~5.DATAB
+regin[3] => regout~4.DATAB
+regin[4] => regout~3.DATAB
+regin[5] => regout~2.DATAB
+regin[6] => regout~1.DATAB
+regin[7] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[2] <= regout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[3] <= regout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[4] <= regout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[5] <= regout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[6] <= regout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[7] <= regout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

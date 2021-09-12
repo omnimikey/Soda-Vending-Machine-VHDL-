@@ -1,0 +1,258 @@
+|bit4_comp
+A0 => bit_comp:BC0.Ai
+A1 => bit_comp:BC1.Ai
+A2 => bit_comp:BC2.Ai
+A3 => bit_comp:BC3.Ai
+B0 => bit_comp:BC0.Bi
+B1 => bit_comp:BC1.Bi
+B2 => bit_comp:BC2.Bi
+B3 => bit_comp:BC3.Bi
+Cip1 => bit_comp:BC0.Cip1
+Dip1 => bit_comp:BC0.Dip1
+AgtB <= bit_comp:BC3.Ci
+AltB <= bit_comp:BC3.Di
+AeqB <= nor_gate:NR.O
+
+
+|bit4_comp|bit_comp:BC0
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|bit4_comp|bit_comp:BC0|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC0|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|bit4_comp|bit_comp:BC1|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC1|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|bit4_comp|bit_comp:BC2|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC2|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|bit4_comp|bit_comp:BC3|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|bit_comp:BC3|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bit4_comp|nor_gate:NR
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

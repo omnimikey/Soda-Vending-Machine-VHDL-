@@ -1,0 +1,263 @@
+Simulator report for lab3StateDiagram
+Wed Mar 09 18:04:42 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 76 nodes     ;
+; Simulation Coverage         ;      76.32 % ;
+; Total Number of Transitions ; 324          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                              ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                            ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                         ; Timing        ;
+; Start time                                                                                 ; 0 ns                                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                ;               ;
+; Vector input source                                                                        ; Z:/cgrah064/Documents/ELG4137/Lab3/accumulator.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                 ; On            ;
+; Check outputs                                                                              ; Off                                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                ; Off           ;
+; Detect glitches                                                                            ; Off                                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                               ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                          ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                          ; Transport     ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      76.32 % ;
+; Total nodes checked                                 ; 76           ;
+; Total output ports checked                          ; 76           ;
+; Total output ports with complete 1/0-value coverage ; 58           ;
+; Total output ports with no 1/0-value coverage       ; 18           ;
+; Total output ports with no 1-value coverage         ; 18           ;
+; Total output ports with no 0-value coverage         ; 18           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                          ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |accumulator|clk                                        ; |accumulator|clk                                        ; out              ;
+; |accumulator|reset                                      ; |accumulator|reset                                      ; out              ;
+; |accumulator|data_in[0]                                 ; |accumulator|data_in[0]                                 ; out              ;
+; |accumulator|data_in[1]                                 ; |accumulator|data_in[1]                                 ; out              ;
+; |accumulator|data_in[3]                                 ; |accumulator|data_in[3]                                 ; out              ;
+; |accumulator|data_in[4]                                 ; |accumulator|data_in[4]                                 ; out              ;
+; |accumulator|data_in[6]                                 ; |accumulator|data_in[6]                                 ; out              ;
+; |accumulator|data_in[7]                                 ; |accumulator|data_in[7]                                 ; out              ;
+; |accumulator|data_out[0]                                ; |accumulator|data_out[0]                                ; pin_out          ;
+; |accumulator|data_out[1]                                ; |accumulator|data_out[1]                                ; pin_out          ;
+; |accumulator|data_out[3]                                ; |accumulator|data_out[3]                                ; pin_out          ;
+; |accumulator|data_out[4]                                ; |accumulator|data_out[4]                                ; pin_out          ;
+; |accumulator|data_out[6]                                ; |accumulator|data_out[6]                                ; pin_out          ;
+; |accumulator|data_out[7]                                ; |accumulator|data_out[7]                                ; pin_out          ;
+; |accumulator|register8bit:NG1|regout~0                  ; |accumulator|register8bit:NG1|regout~0                  ; out              ;
+; |accumulator|register8bit:NG1|regout~1                  ; |accumulator|register8bit:NG1|regout~1                  ; out              ;
+; |accumulator|register8bit:NG1|regout~2                  ; |accumulator|register8bit:NG1|regout~2                  ; out              ;
+; |accumulator|register8bit:NG1|regout~3                  ; |accumulator|register8bit:NG1|regout~3                  ; out              ;
+; |accumulator|register8bit:NG1|regout~4                  ; |accumulator|register8bit:NG1|regout~4                  ; out              ;
+; |accumulator|register8bit:NG1|regout~5                  ; |accumulator|register8bit:NG1|regout~5                  ; out              ;
+; |accumulator|register8bit:NG1|regout~6                  ; |accumulator|register8bit:NG1|regout~6                  ; out              ;
+; |accumulator|register8bit:NG1|regout~7                  ; |accumulator|register8bit:NG1|regout~7                  ; out              ;
+; |accumulator|register8bit:NG1|regout~8                  ; |accumulator|register8bit:NG1|regout~8                  ; out              ;
+; |accumulator|register8bit:NG1|regout~9                  ; |accumulator|register8bit:NG1|regout~9                  ; out              ;
+; |accumulator|register8bit:NG1|regout~10                 ; |accumulator|register8bit:NG1|regout~10                 ; out              ;
+; |accumulator|register8bit:NG1|regout~11                 ; |accumulator|register8bit:NG1|regout~11                 ; out              ;
+; |accumulator|register8bit:NG1|regout~12                 ; |accumulator|register8bit:NG1|regout~12                 ; out              ;
+; |accumulator|register8bit:NG1|regout~13                 ; |accumulator|register8bit:NG1|regout~13                 ; out              ;
+; |accumulator|register8bit:NG1|regout~14                 ; |accumulator|register8bit:NG1|regout~14                 ; out              ;
+; |accumulator|register8bit:NG1|regout~15                 ; |accumulator|register8bit:NG1|regout~15                 ; out              ;
+; |accumulator|register8bit:NG1|regout[0]                 ; |accumulator|register8bit:NG1|regout[0]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[1]                 ; |accumulator|register8bit:NG1|regout[1]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[3]                 ; |accumulator|register8bit:NG1|regout[3]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[4]                 ; |accumulator|register8bit:NG1|regout[4]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[6]                 ; |accumulator|register8bit:NG1|regout[6]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[7]                 ; |accumulator|register8bit:NG1|regout[7]                 ; regout           ;
+; |accumulator|adder8bit:BA0|adder1bit:FA7|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA7|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA7|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA7|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA6|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA6|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA6|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA6|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA6|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA6|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA4|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA4|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA4|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA4|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA4|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA4|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA3|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA3|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA3|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA3|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA3|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA3|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA1|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA1|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA1|exor_gate:G2|O ; |accumulator|adder8bit:BA0|adder1bit:FA1|exor_gate:G2|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA1|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA1|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA0|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA0|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA0|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA0|exor_gate:G1|O ; out0             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |accumulator|data_in[2]                                 ; |accumulator|data_in[2]                                 ; out              ;
+; |accumulator|data_in[5]                                 ; |accumulator|data_in[5]                                 ; out              ;
+; |accumulator|data_out[2]                                ; |accumulator|data_out[2]                                ; pin_out          ;
+; |accumulator|data_out[5]                                ; |accumulator|data_out[5]                                ; pin_out          ;
+; |accumulator|register8bit:NG1|regout[2]                 ; |accumulator|register8bit:NG1|regout[2]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[5]                 ; |accumulator|register8bit:NG1|regout[5]                 ; regout           ;
+; |accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA2|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O  ; out0             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |accumulator|data_in[2]                                 ; |accumulator|data_in[2]                                 ; out              ;
+; |accumulator|data_in[5]                                 ; |accumulator|data_in[5]                                 ; out              ;
+; |accumulator|data_out[2]                                ; |accumulator|data_out[2]                                ; pin_out          ;
+; |accumulator|data_out[5]                                ; |accumulator|data_out[5]                                ; pin_out          ;
+; |accumulator|register8bit:NG1|regout[2]                 ; |accumulator|register8bit:NG1|regout[2]                 ; regout           ;
+; |accumulator|register8bit:NG1|regout[5]                 ; |accumulator|register8bit:NG1|regout[5]                 ; regout           ;
+; |accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA6|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA5|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA5|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA5|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA4|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA3|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|or_gate:G5|O   ; |accumulator|adder8bit:BA0|adder1bit:FA2|or_gate:G5|O   ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O  ; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G4|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA2|and_gate:G3|O  ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G1|O ; |accumulator|adder8bit:BA0|adder1bit:FA2|exor_gate:G1|O ; out0             ;
+; |accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O  ; |accumulator|adder8bit:BA0|adder1bit:FA1|and_gate:G3|O  ; out0             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Mar 09 18:04:41 2016
+Info: Command: quartus_sim --simulation_results_format=VWF lab3Part1 -c lab3StateDiagram
+Info (324025): Using vector source file "Z:/cgrah064/Documents/ELG4137/Lab3/accumulator.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 320.0 ns on register "|accumulator|register8bit:NG1|regout[1]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 320.0 ns on register "|accumulator|register8bit:NG1|regout[3]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 320.0 ns on register "|accumulator|register8bit:NG1|regout[7]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 560.0 ns on register "|accumulator|register8bit:NG1|regout[0]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 560.0 ns on register "|accumulator|register8bit:NG1|regout[4]"
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      76.32 %
+Info (328052): Number of transitions in simulation is 324
+Info (324045): Vector file lab3StateDiagram.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 323 megabytes
+    Info: Processing ended: Wed Mar 09 18:04:42 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

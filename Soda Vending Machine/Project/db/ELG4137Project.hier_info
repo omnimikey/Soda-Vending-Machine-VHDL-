@@ -1,0 +1,1878 @@
+|vendMachine
+clk => register8bit:RE1.clk
+clk => register8bit:RE2.clk
+clk => register8bit:RE3.clk
+clk => register2bit:RE4.clk
+clk => register2bit:RE5.clk
+clk => state~14.DATAIN
+clk => register8bit:RE0.clk
+reset => state~0.OUTPUTSELECT
+reset => state~1.OUTPUTSELECT
+reset => state~4.OUTPUTSELECT
+reset => state~5.OUTPUTSELECT
+reset => state~8.OUTPUTSELECT
+reset => state~9.OUTPUTSELECT
+reset => Selector0.IN2
+c => state~1.DATAA
+c => state~0.DATAA
+choice => mux8:MU0.sel
+choice => mux2:MU1.sel
+V[0] => adder8bit:BA0.in1[0]
+V[1] => adder8bit:BA0.in1[1]
+V[2] => adder8bit:BA0.in1[2]
+V[3] => adder8bit:BA0.in1[3]
+V[4] => adder8bit:BA0.in1[4]
+V[5] => adder8bit:BA0.in1[5]
+V[6] => adder8bit:BA0.in1[6]
+V[7] => adder8bit:BA0.in1[7]
+P[0] <= register8bit:RE1.regout[0]
+P[1] <= register8bit:RE1.regout[1]
+P[2] <= register8bit:RE1.regout[2]
+P[3] <= register8bit:RE1.regout[3]
+P[4] <= register8bit:RE1.regout[4]
+P[5] <= register8bit:RE1.regout[5]
+P[6] <= register8bit:RE1.regout[6]
+P[7] <= register8bit:RE1.regout[7]
+E[0] <= register8bit:RE3.regout[0]
+E[1] <= register8bit:RE3.regout[1]
+E[2] <= register8bit:RE3.regout[2]
+E[3] <= register8bit:RE3.regout[3]
+E[4] <= register8bit:RE3.regout[4]
+E[5] <= register8bit:RE3.regout[5]
+E[6] <= register8bit:RE3.regout[6]
+E[7] <= register8bit:RE3.regout[7]
+drinkCost[0] <= mux8:MU0.C[0]
+drinkCost[1] <= mux8:MU0.C[1]
+drinkCost[2] <= mux8:MU0.C[2]
+drinkCost[3] <= mux8:MU0.C[3]
+drinkCost[4] <= mux8:MU0.C[4]
+drinkCost[5] <= mux8:MU0.C[5]
+drinkCost[6] <= mux8:MU0.C[6]
+drinkCost[7] <= mux8:MU0.C[7]
+D[0] <= register2bit:RE4.regout[0]
+D[1] <= register2bit:RE4.regout[1]
+state0 <= state0~0.DB_MAX_OUTPUT_PORT_TYPE
+state1 <= state1~0.DB_MAX_OUTPUT_PORT_TYPE
+state2 <= state2~0.DB_MAX_OUTPUT_PORT_TYPE
+PgreaterThanC <= bit8_comp:CO0.Sgt
+PlessThanC <= bit8_comp:CO0.Slt
+PequalToC <= bit8_comp:CO0.Seq
+
+
+|vendMachine|mux8:MU0
+sel => C~0.OUTPUTSELECT
+sel => C~1.OUTPUTSELECT
+sel => C~2.OUTPUTSELECT
+sel => C~3.OUTPUTSELECT
+sel => C~4.OUTPUTSELECT
+sel => C~5.OUTPUTSELECT
+sel => C~6.OUTPUTSELECT
+sel => C~7.OUTPUTSELECT
+A[0] => C~7.DATAB
+A[1] => C~6.DATAB
+A[2] => C~5.DATAB
+A[3] => C~4.DATAB
+A[4] => C~3.DATAB
+A[5] => C~2.DATAB
+A[6] => C~1.DATAB
+A[7] => C~0.DATAB
+B[0] => C~7.DATAA
+B[1] => C~6.DATAA
+B[2] => C~5.DATAA
+B[3] => C~4.DATAA
+B[4] => C~3.DATAA
+B[5] => C~2.DATAA
+B[6] => C~1.DATAA
+B[7] => C~0.DATAA
+C[0] <= C~7.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= C~6.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= C~5.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= C~4.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= C~3.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= C~2.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= C~1.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= C~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|mux2:MU1
+sel => C~0.OUTPUTSELECT
+sel => C~1.OUTPUTSELECT
+A[0] => C~1.DATAB
+A[1] => C~0.DATAB
+B[0] => C~1.DATAA
+B[1] => C~0.DATAA
+C[0] <= C~1.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= C~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|register8bit:RE0
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+clk => regout[2]~reg0.CLK
+clk => regout[3]~reg0.CLK
+clk => regout[4]~reg0.CLK
+clk => regout[5]~reg0.CLK
+clk => regout[6]~reg0.CLK
+clk => regout[7]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+reset => regout~4.OUTPUTSELECT
+reset => regout~5.OUTPUTSELECT
+reset => regout~6.OUTPUTSELECT
+reset => regout~7.OUTPUTSELECT
+reset => regout~8.OUTPUTSELECT
+reset => regout~9.OUTPUTSELECT
+reset => regout~10.OUTPUTSELECT
+reset => regout~11.OUTPUTSELECT
+reset => regout~12.OUTPUTSELECT
+reset => regout~13.OUTPUTSELECT
+reset => regout~14.OUTPUTSELECT
+reset => regout~15.OUTPUTSELECT
+regin[0] => regout~7.DATAB
+regin[1] => regout~6.DATAB
+regin[2] => regout~5.DATAB
+regin[3] => regout~4.DATAB
+regin[4] => regout~3.DATAB
+regin[5] => regout~2.DATAB
+regin[6] => regout~1.DATAB
+regin[7] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[2] <= regout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[3] <= regout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[4] <= regout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[5] <= regout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[6] <= regout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[7] <= regout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0
+in1[0] => adder1bit:FA0.A
+in1[1] => adder1bit:FA1.A
+in1[2] => adder1bit:FA2.A
+in1[3] => adder1bit:FA3.A
+in1[4] => adder1bit:FA4.A
+in1[5] => adder1bit:FA5.A
+in1[6] => adder1bit:FA6.A
+in1[7] => adder1bit:FA7.A
+in2[0] => adder1bit:FA0.B
+in2[1] => adder1bit:FA1.B
+in2[2] => adder1bit:FA2.B
+in2[3] => adder1bit:FA3.B
+in2[4] => adder1bit:FA4.B
+in2[5] => adder1bit:FA5.B
+in2[6] => adder1bit:FA6.B
+in2[7] => adder1bit:FA7.B
+ci => adder1bit:FA0.Cin
+sum[0] <= adder1bit:FA0.Sum
+sum[1] <= adder1bit:FA1.Sum
+sum[2] <= adder1bit:FA2.Sum
+sum[3] <= adder1bit:FA3.Sum
+sum[4] <= adder1bit:FA4.Sum
+sum[5] <= adder1bit:FA5.Sum
+sum[6] <= adder1bit:FA6.Sum
+sum[7] <= adder1bit:FA7.Sum
+co <= adder1bit:FA7.Cout
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA0
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA0|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA0|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA0|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA0|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA0|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA1
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA1|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA1|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA2
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA2|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA2|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA2|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA2|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA3
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA3|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA3|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA3|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA4
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA4|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA4|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA5
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA5|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA5|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA5|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA6
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA6|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA6|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA6|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA7
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA7|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA7|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA7|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA0|adder1bit:FA7|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|register8bit:RE1
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+clk => regout[2]~reg0.CLK
+clk => regout[3]~reg0.CLK
+clk => regout[4]~reg0.CLK
+clk => regout[5]~reg0.CLK
+clk => regout[6]~reg0.CLK
+clk => regout[7]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+reset => regout~4.OUTPUTSELECT
+reset => regout~5.OUTPUTSELECT
+reset => regout~6.OUTPUTSELECT
+reset => regout~7.OUTPUTSELECT
+reset => regout~8.OUTPUTSELECT
+reset => regout~9.OUTPUTSELECT
+reset => regout~10.OUTPUTSELECT
+reset => regout~11.OUTPUTSELECT
+reset => regout~12.OUTPUTSELECT
+reset => regout~13.OUTPUTSELECT
+reset => regout~14.OUTPUTSELECT
+reset => regout~15.OUTPUTSELECT
+regin[0] => regout~7.DATAB
+regin[1] => regout~6.DATAB
+regin[2] => regout~5.DATAB
+regin[3] => regout~4.DATAB
+regin[4] => regout~3.DATAB
+regin[5] => regout~2.DATAB
+regin[6] => regout~1.DATAB
+regin[7] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[2] <= regout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[3] <= regout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[4] <= regout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[5] <= regout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[6] <= regout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[7] <= regout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|register8bit:RE2
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+clk => regout[2]~reg0.CLK
+clk => regout[3]~reg0.CLK
+clk => regout[4]~reg0.CLK
+clk => regout[5]~reg0.CLK
+clk => regout[6]~reg0.CLK
+clk => regout[7]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+reset => regout~4.OUTPUTSELECT
+reset => regout~5.OUTPUTSELECT
+reset => regout~6.OUTPUTSELECT
+reset => regout~7.OUTPUTSELECT
+reset => regout~8.OUTPUTSELECT
+reset => regout~9.OUTPUTSELECT
+reset => regout~10.OUTPUTSELECT
+reset => regout~11.OUTPUTSELECT
+reset => regout~12.OUTPUTSELECT
+reset => regout~13.OUTPUTSELECT
+reset => regout~14.OUTPUTSELECT
+reset => regout~15.OUTPUTSELECT
+regin[0] => regout~7.DATAB
+regin[1] => regout~6.DATAB
+regin[2] => regout~5.DATAB
+regin[3] => regout~4.DATAB
+regin[4] => regout~3.DATAB
+regin[5] => regout~2.DATAB
+regin[6] => regout~1.DATAB
+regin[7] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[2] <= regout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[3] <= regout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[4] <= regout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[5] <= regout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[6] <= regout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[7] <= regout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0
+Acu[0] => bit_comp:BC7.Bi
+Acu[1] => bit_comp:BC6.Bi
+Acu[2] => bit_comp:BC5.Bi
+Acu[3] => bit_comp:BC4.Bi
+Acu[4] => bit_comp:BC3.Bi
+Acu[5] => bit_comp:BC2.Bi
+Acu[6] => bit_comp:BC1.Bi
+Acu[7] => bit_comp:BC0.Bi
+S[0] => bit_comp:BC7.Ai
+S[1] => bit_comp:BC6.Ai
+S[2] => bit_comp:BC5.Ai
+S[3] => bit_comp:BC4.Ai
+S[4] => bit_comp:BC3.Ai
+S[5] => bit_comp:BC2.Ai
+S[6] => bit_comp:BC1.Ai
+S[7] => bit_comp:BC0.Ai
+Cip1 => bit_comp:BC0.Cip1
+Dip1 => bit_comp:BC0.Dip1
+Sgt <= bit_comp:BC7.Ci
+Slt <= bit_comp:BC7.Di
+Seq <= nor_gate:NR.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC0|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC1|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC2|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC3|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC5|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC6|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7
+Ai => not_gate:NG0.I
+Ai => nand4_gate:NA40.I1
+Bi => not_gate:NG1.I
+Bi => nand4_gate:NA41.I2
+Cip1 => not_gate:NG2.I
+Dip1 => not_gate:NG3.I
+Ci <= nand_gate:NA0.O
+Di <= nand_gate:NA1.O
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|not_gate:NG0
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|not_gate:NG1
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|not_gate:NG2
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|not_gate:NG3
+I => O.DATAIN
+O <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA40
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|nand4_gate:NA41
+I1 => O~0.IN0
+I2 => O~0.IN1
+I3 => O~1.IN1
+I4 => O~2.IN1
+O <= O~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA0
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|bit8_comp:CO0|nor_gate:NR
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1
+in1[0] => adder1bit:FA0.A
+in1[1] => adder1bit:FA1.A
+in1[2] => adder1bit:FA2.A
+in1[3] => adder1bit:FA3.A
+in1[4] => adder1bit:FA4.A
+in1[5] => adder1bit:FA5.A
+in1[6] => adder1bit:FA6.A
+in1[7] => adder1bit:FA7.A
+in2[0] => adder1bit:FA0.B
+in2[1] => adder1bit:FA1.B
+in2[2] => adder1bit:FA2.B
+in2[3] => adder1bit:FA3.B
+in2[4] => adder1bit:FA4.B
+in2[5] => adder1bit:FA5.B
+in2[6] => adder1bit:FA6.B
+in2[7] => adder1bit:FA7.B
+ci => adder1bit:FA0.Cin
+sum[0] <= adder1bit:FA0.Sum
+sum[1] <= adder1bit:FA1.Sum
+sum[2] <= adder1bit:FA2.Sum
+sum[3] <= adder1bit:FA3.Sum
+sum[4] <= adder1bit:FA4.Sum
+sum[5] <= adder1bit:FA5.Sum
+sum[6] <= adder1bit:FA6.Sum
+sum[7] <= adder1bit:FA7.Sum
+co <= adder1bit:FA7.Cout
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA0
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA0|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA0|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA0|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA0|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA0|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA1
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA1|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA1|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA1|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA1|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA1|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA2
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA2|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA2|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA2|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA2|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA2|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA3
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA3|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA3|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA3|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA3|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA3|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA4
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA4|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA4|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA4|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA4|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA4|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA5
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA5|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA5|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA5|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA5|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA5|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA6
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA6|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA6|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA6|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA6|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA6|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA7
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA7|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA7|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA7|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA7|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA1|adder1bit:FA7|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2
+in1[0] => adder1bit:FA0.A
+in1[1] => adder1bit:FA1.A
+in1[2] => adder1bit:FA2.A
+in1[3] => adder1bit:FA3.A
+in1[4] => adder1bit:FA4.A
+in1[5] => adder1bit:FA5.A
+in1[6] => adder1bit:FA6.A
+in1[7] => adder1bit:FA7.A
+in2[0] => adder1bit:FA0.B
+in2[1] => adder1bit:FA1.B
+in2[2] => adder1bit:FA2.B
+in2[3] => adder1bit:FA3.B
+in2[4] => adder1bit:FA4.B
+in2[5] => adder1bit:FA5.B
+in2[6] => adder1bit:FA6.B
+in2[7] => adder1bit:FA7.B
+ci => adder1bit:FA0.Cin
+sum[0] <= adder1bit:FA0.Sum
+sum[1] <= adder1bit:FA1.Sum
+sum[2] <= adder1bit:FA2.Sum
+sum[3] <= adder1bit:FA3.Sum
+sum[4] <= adder1bit:FA4.Sum
+sum[5] <= adder1bit:FA5.Sum
+sum[6] <= adder1bit:FA6.Sum
+sum[7] <= adder1bit:FA7.Sum
+co <= adder1bit:FA7.Cout
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA0
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA0|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA0|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA0|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA0|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA0|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA1
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA1|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA1|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA1|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA1|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA1|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA2
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA2|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA2|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA2|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA2|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA2|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA3
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA3|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA3|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA3|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA3|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA3|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA4
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA4|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA4|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA4|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA4|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA5
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA5|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA5|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA5|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA5|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA5|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA6
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA6|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA6|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA6|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA6|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA6|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA7
+A => exor_gate:G1.I1
+A => and_gate:G4.I1
+B => exor_gate:G1.I2
+B => and_gate:G4.I2
+Cin => exor_gate:G2.I2
+Cin => and_gate:G3.I2
+Sum <= exor_gate:G2.O
+Cout <= or_gate:G5.O
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA7|exor_gate:G1
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA7|exor_gate:G2
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA7|and_gate:G3
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA7|and_gate:G4
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|adder8bit:BA2|adder1bit:FA7|or_gate:G5
+I1 => O~0.IN0
+I2 => O~0.IN1
+O <= O~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|register8bit:RE3
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+clk => regout[2]~reg0.CLK
+clk => regout[3]~reg0.CLK
+clk => regout[4]~reg0.CLK
+clk => regout[5]~reg0.CLK
+clk => regout[6]~reg0.CLK
+clk => regout[7]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+reset => regout~4.OUTPUTSELECT
+reset => regout~5.OUTPUTSELECT
+reset => regout~6.OUTPUTSELECT
+reset => regout~7.OUTPUTSELECT
+reset => regout~8.OUTPUTSELECT
+reset => regout~9.OUTPUTSELECT
+reset => regout~10.OUTPUTSELECT
+reset => regout~11.OUTPUTSELECT
+reset => regout~12.OUTPUTSELECT
+reset => regout~13.OUTPUTSELECT
+reset => regout~14.OUTPUTSELECT
+reset => regout~15.OUTPUTSELECT
+regin[0] => regout~7.DATAB
+regin[1] => regout~6.DATAB
+regin[2] => regout~5.DATAB
+regin[3] => regout~4.DATAB
+regin[4] => regout~3.DATAB
+regin[5] => regout~2.DATAB
+regin[6] => regout~1.DATAB
+regin[7] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[2] <= regout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[3] <= regout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[4] <= regout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[5] <= regout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[6] <= regout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[7] <= regout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|register2bit:RE4
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+regin[0] => regout~1.DATAB
+regin[1] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vendMachine|register2bit:RE5
+clk => regout[0]~reg0.CLK
+clk => regout[1]~reg0.CLK
+reset => regout~0.OUTPUTSELECT
+reset => regout~1.OUTPUTSELECT
+reset => regout~2.OUTPUTSELECT
+reset => regout~3.OUTPUTSELECT
+regin[0] => regout~1.DATAB
+regin[1] => regout~0.DATAB
+regout[0] <= regout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+regout[1] <= regout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

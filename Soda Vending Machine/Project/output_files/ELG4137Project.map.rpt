@@ -1,0 +1,490 @@
+Analysis & Synthesis report for ELG4137Project
+Tue Apr 12 16:45:54 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |vendMachine|state
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "adder8bit:BA2"
+ 12. Port Connectivity Checks: "adder8bit:BA1"
+ 13. Port Connectivity Checks: "bit8_comp:CO0"
+ 14. Port Connectivity Checks: "adder8bit:BA0"
+ 15. Port Connectivity Checks: "register8bit:RE0"
+ 16. Port Connectivity Checks: "mux2:MU1"
+ 17. Port Connectivity Checks: "mux8:MU0"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 12 16:45:53 2016           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ELG4137Project                                  ;
+; Top-level Entity Name              ; vendMachine                                     ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 68                                              ;
+;     Total combinational functions  ; 50                                              ;
+;     Dedicated logic registers      ; 39                                              ;
+; Total registers                    ; 39                                              ;
+; Total pins                         ; 44                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; vendMachine        ; ELG4137Project     ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++-----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++-----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; project_comparator.vhd            ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Project/project_comparator.vhd  ;         ;
+; ../Lab2Quartus/gates.vhd          ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Lab2Quartus/gates.vhd           ;         ;
+; ../Lab2Quartus/FA1.vhd            ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Lab2Quartus/FA1.vhd             ;         ;
+; ../Lab2Quartus/bit_comparator.vhd ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Lab2Quartus/bit_comparator.vhd  ;         ;
+; ../Lab3/register8bit.vhd          ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Lab3/register8bit.vhd           ;         ;
+; ../Lab3/adder8bit.vhd             ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Lab3/adder8bit.vhd              ;         ;
+; ELG4137ProjectTake2.vhd           ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Project/ELG4137ProjectTake2.vhd ;         ;
+; register2bit.vhd                  ; yes             ; User VHDL File  ; Z:/cgrah064/Documents/ELG4137/Project/register2bit.vhd        ;         ;
++-----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 68        ;
+;                                             ;           ;
+; Total combinational functions               ; 50        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 28        ;
+;     -- 3 input functions                    ; 13        ;
+;     -- <=2 input functions                  ; 9         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 50        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 39        ;
+;     -- Dedicated logic registers            ; 39        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 44        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 39        ;
+; Total fan-out                               ; 319       ;
+; Average fan-out                             ; 1.80      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+; |vendMachine               ; 50 (7)            ; 39 (3)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |vendMachine                                            ; work         ;
+;    |adder8bit:BA0|         ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0                              ; work         ;
+;       |adder1bit:FA1|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA1                ; work         ;
+;          |exor_gate:G2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA1|exor_gate:G2   ; work         ;
+;          |or_gate:G5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA1|or_gate:G5     ; work         ;
+;       |adder1bit:FA3|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA3                ; work         ;
+;          |exor_gate:G2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA3|exor_gate:G2   ; work         ;
+;          |or_gate:G5|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA3|or_gate:G5     ; work         ;
+;       |adder1bit:FA4|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA4                ; work         ;
+;          |exor_gate:G2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA4|exor_gate:G2   ; work         ;
+;          |or_gate:G5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA4|or_gate:G5     ; work         ;
+;       |adder1bit:FA5|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA5                ; work         ;
+;          |or_gate:G5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA0|adder1bit:FA5|or_gate:G5     ; work         ;
+;    |adder8bit:BA2|         ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2                              ; work         ;
+;       |adder1bit:FA1|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA1                ; work         ;
+;          |and_gate:G3|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA1|and_gate:G3    ; work         ;
+;       |adder1bit:FA2|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA2                ; work         ;
+;          |or_gate:G5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA2|or_gate:G5     ; work         ;
+;       |adder1bit:FA3|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA3                ; work         ;
+;          |or_gate:G5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA3|or_gate:G5     ; work         ;
+;       |adder1bit:FA5|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA5                ; work         ;
+;          |exor_gate:G2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA5|exor_gate:G2   ; work         ;
+;          |or_gate:G5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|adder8bit:BA2|adder1bit:FA5|or_gate:G5     ; work         ;
+;    |bit8_comp:CO0|         ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0                              ; work         ;
+;       |bit_comp:BC4|       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC4                 ; work         ;
+;          |nand_gate:NA0|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC4|nand_gate:NA0   ; work         ;
+;       |bit_comp:BC5|       ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC5                 ; work         ;
+;          |nand_gate:NA1|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC5|nand_gate:NA1   ; work         ;
+;       |bit_comp:BC6|       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC6                 ; work         ;
+;          |nand4_gate:NA41| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC6|nand4_gate:NA41 ; work         ;
+;       |bit_comp:BC7|       ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC7                 ; work         ;
+;          |nand_gate:NA0|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA0   ; work         ;
+;          |nand_gate:NA1|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|bit_comp:BC7|nand_gate:NA1   ; work         ;
+;       |nor_gate:NR|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|bit8_comp:CO0|nor_gate:NR                  ; work         ;
+;    |register2bit:RE4|      ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|register2bit:RE4                           ; work         ;
+;    |register2bit:RE5|      ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|register2bit:RE5                           ; work         ;
+;    |register8bit:RE0|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|register8bit:RE0                           ; work         ;
+;    |register8bit:RE1|      ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|register8bit:RE1                           ; work         ;
+;    |register8bit:RE2|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|register8bit:RE2                           ; work         ;
+;    |register8bit:RE3|      ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendMachine|register8bit:RE3                           ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------+
+; State Machine - |vendMachine|state        ;
++----------+----------+----------+----------+
+; Name     ; state.S2 ; state.S1 ; state.S0 ;
++----------+----------+----------+----------+
+; state.S0 ; 0        ; 0        ; 0        ;
+; state.S1 ; 0        ; 1        ; 1        ;
+; state.S2 ; 1        ; 0        ; 1        ;
++----------+----------+----------+----------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 39    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vendMachine|state         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder8bit:BA2"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; ci   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder8bit:BA1"                                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; in2[7..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; in2[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ci        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; co        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "bit8_comp:CO0" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; cip1 ; Input ; Info     ; Stuck at GND    ;
+; dip1 ; Input ; Info     ; Stuck at GND    ;
++------+-------+----------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder8bit:BA0"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; ci   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register8bit:RE0" ;
++-------+-------+----------+-------------------+
+; Port  ; Type  ; Severity ; Details           ;
++-------+-------+----------+-------------------+
+; reset ; Input ; Info     ; Stuck at VCC      ;
++-------+-------+----------+-------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "mux2:MU1"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; a[1] ; Input ; Info     ; Stuck at VCC ;
+; a[0] ; Input ; Info     ; Stuck at GND ;
+; b[1] ; Input ; Info     ; Stuck at GND ;
+; b[0] ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "mux8:MU0"      ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; a[7..5] ; Input ; Info     ; Stuck at GND ;
+; a[1..0] ; Input ; Info     ; Stuck at GND ;
+; a[4]    ; Input ; Info     ; Stuck at VCC ;
+; a[3]    ; Input ; Info     ; Stuck at GND ;
+; a[2]    ; Input ; Info     ; Stuck at VCC ;
+; b[3..0] ; Input ; Info     ; Stuck at VCC ;
+; b[7..4] ; Input ; Info     ; Stuck at GND ;
++---------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr 12 16:45:46 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ELG4137Project -c ELG4137Project
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file project_comparator.vhd
+    Info (12022): Found design unit 1: bit8_comp-structure_view
+    Info (12023): Found entity 1: bit8_comp
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab2quartus/ha.vhd
+    Info (12022): Found design unit 1: half_adder-structure_view
+    Info (12023): Found entity 1: half_adder
+Info (12021): Found 18 design units, including 9 entities, in source file /cgrah064/documents/elg4137/lab2quartus/gates.vhd
+    Info (12022): Found design unit 1: not_gate-behavioral
+    Info (12022): Found design unit 2: and_gate-behavioral
+    Info (12022): Found design unit 3: or_gate-behavioral
+    Info (12022): Found design unit 4: nor_gate-behavioral
+    Info (12022): Found design unit 5: exor_gate-behavioral
+    Info (12022): Found design unit 6: nand_gate-behavioral
+    Info (12022): Found design unit 7: nand4_gate-behavioral
+    Info (12022): Found design unit 8: mux8-behavioral
+    Info (12022): Found design unit 9: mux2-behavioral
+    Info (12023): Found entity 1: not_gate
+    Info (12023): Found entity 2: and_gate
+    Info (12023): Found entity 3: or_gate
+    Info (12023): Found entity 4: nor_gate
+    Info (12023): Found entity 5: exor_gate
+    Info (12023): Found entity 6: nand_gate
+    Info (12023): Found entity 7: nand4_gate
+    Info (12023): Found entity 8: mux8
+    Info (12023): Found entity 9: mux2
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab2quartus/fa2.vhd
+    Info (12022): Found design unit 1: FULL_ADDER-structure_view
+    Info (12023): Found entity 1: FULL_ADDER
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab2quartus/fa1.vhd
+    Info (12022): Found design unit 1: adder1bit-structure_view
+    Info (12023): Found entity 1: adder1bit
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab2quartus/bit_comparator.vhd
+    Info (12022): Found design unit 1: bit_comp-structure_view
+    Info (12023): Found entity 1: bit_comp
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab2quartus/4bit_comparator.vhd
+    Info (12022): Found design unit 1: bit4_comp-structure_view
+    Info (12023): Found entity 1: bit4_comp
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab3/register8bit.vhd
+    Info (12022): Found design unit 1: register8bit-register8bit
+    Info (12023): Found entity 1: register8bit
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab3/mealymachine.vhd
+    Info (12022): Found design unit 1: state_machine-state_machine
+    Info (12023): Found entity 1: state_machine
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab3/adder8bit.vhd
+    Info (12022): Found design unit 1: adder8bit-structure_view
+    Info (12023): Found entity 1: adder8bit
+Info (12021): Found 2 design units, including 1 entities, in source file /cgrah064/documents/elg4137/lab3/accumulator.vhd
+    Info (12022): Found design unit 1: accumulator-structure_view
+    Info (12023): Found entity 1: accumulator
+Info (12021): Found 2 design units, including 1 entities, in source file elg4137projecttake2.vhd
+    Info (12022): Found design unit 1: vendMachine-stateMachine
+    Info (12023): Found entity 1: vendMachine
+Info (12021): Found 2 design units, including 1 entities, in source file register2bit.vhd
+    Info (12022): Found design unit 1: register2bit-register2bit
+    Info (12023): Found entity 1: register2bit
+Info (12127): Elaborating entity "vendMachine" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at ELG4137ProjectTake2.vhd(71): used explicit default value for signal "logic0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ELG4137ProjectTake2.vhd(72): used explicit default value for signal "temp1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ELG4137ProjectTake2.vhd(73): used explicit default value for signal "C0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ELG4137ProjectTake2.vhd(74): used explicit default value for signal "C1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ELG4137ProjectTake2.vhd(75): used explicit default value for signal "D0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ELG4137ProjectTake2.vhd(76): used explicit default value for signal "D1" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at ELG4137ProjectTake2.vhd(77): object "tempC" assigned a value but never read
+Info (12128): Elaborating entity "mux8" for hierarchy "mux8:MU0"
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:MU1"
+Info (12128): Elaborating entity "register8bit" for hierarchy "register8bit:RE0"
+Info (12128): Elaborating entity "adder8bit" for hierarchy "adder8bit:BA0"
+Info (12128): Elaborating entity "adder1bit" for hierarchy "adder8bit:BA0|adder1bit:FA0"
+Info (12128): Elaborating entity "exor_gate" for hierarchy "adder8bit:BA0|adder1bit:FA0|exor_gate:G1"
+Info (12128): Elaborating entity "and_gate" for hierarchy "adder8bit:BA0|adder1bit:FA0|and_gate:G3"
+Info (12128): Elaborating entity "or_gate" for hierarchy "adder8bit:BA0|adder1bit:FA0|or_gate:G5"
+Info (12128): Elaborating entity "bit8_comp" for hierarchy "bit8_comp:CO0"
+Info (12128): Elaborating entity "bit_comp" for hierarchy "bit8_comp:CO0|bit_comp:BC0"
+Info (12128): Elaborating entity "not_gate" for hierarchy "bit8_comp:CO0|bit_comp:BC0|not_gate:NG0"
+Info (12128): Elaborating entity "nand4_gate" for hierarchy "bit8_comp:CO0|bit_comp:BC0|nand4_gate:NA40"
+Info (12128): Elaborating entity "nand_gate" for hierarchy "bit8_comp:CO0|bit_comp:BC0|nand_gate:NA0"
+Info (12128): Elaborating entity "nor_gate" for hierarchy "bit8_comp:CO0|nor_gate:NR"
+Info (12128): Elaborating entity "register2bit" for hierarchy "register2bit:RE4"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "drinkCost[2]" is stuck at VCC
+    Warning (13410): Pin "drinkCost[5]" is stuck at GND
+    Warning (13410): Pin "drinkCost[6]" is stuck at GND
+    Warning (13410): Pin "drinkCost[7]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 78 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 518 megabytes
+    Info: Processing ended: Tue Apr 12 16:45:54 2016
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+
+
